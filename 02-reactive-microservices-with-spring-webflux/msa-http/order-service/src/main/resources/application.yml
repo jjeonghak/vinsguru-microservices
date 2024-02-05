@@ -1,0 +1,23 @@
+product:
+  service:
+    url: http://localhost:8091/product/
+
+user:
+  service:
+    url: http://localhost:8092/user/
+
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/local?useSSL=false&serverTimezone=Asia/Seoul&characterEncoding=UTF-8
+    username: root
+    password: qwer1234
+
+  jpa:
+    open-in-view: true
+    hibernate:
+      ddl-auto: create
+    show-sql: false
+    properties:
+      hibernate.format_sql: false
+      dialect: org.hibernate.dialect.MySQL8InnoDBDialect

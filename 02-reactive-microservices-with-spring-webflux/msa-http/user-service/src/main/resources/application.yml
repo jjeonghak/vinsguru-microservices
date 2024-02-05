@@ -1,0 +1,10 @@
+server:
+  port: 8092
+
+spring:
+  r2dbc:
+    url: r2dbc:mysql://localhost:3306/local?serverTimezone=Asia/Seoul
+    username: root
+    password: qwer1234
+    driver: io.r2dbc.mysql
+
