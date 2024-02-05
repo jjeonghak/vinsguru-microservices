@@ -1,0 +1,21 @@
+spring:
+  rsocket:
+    server:
+      port: 7072
+
+  data:
+    mongodb:
+      host: localhost
+      port: 27017
+      database: tradedb
+
+stock:
+  service:
+    host: localhost
+    port: 7070
+
+user:
+  service:
+    host: localhost
+    port: 7071
+

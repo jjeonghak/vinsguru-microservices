@@ -1,0 +1,14 @@
+spring:
+  rsocket:
+    server:
+      port: 7071
+
+      # ws://localhost:7071/user-service
+#      transport: websocket
+#      mapping-path: /user-service
+
+  data:
+    mongodb:
+      host: localhost
+      port: 27017
+      database: userdb
