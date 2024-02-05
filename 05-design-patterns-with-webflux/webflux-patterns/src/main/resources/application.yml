@@ -1,0 +1,89 @@
+resilience4j:
+  circuitbreaker:
+    instances:
+      review-service:
+        slidingWindowType: COUNT_BASED
+        slidingWindowSize: 4
+        minimumNumberOfCalls: 2
+        failureRateThreshold: 50
+        waitDurationInOpenState: 10s
+        permittedNumberOfCallsInHalfOpenState: 2
+        recordExceptions:
+          - org.springframework.web.reactive.function.client.WebClientResponseException
+          - java.util.concurrent.TimeoutException
+
+  ratelimiter:
+    instances:
+      calculator-service:
+        limitRefreshPeriod: 20s
+        limitForPeriod: 5
+        timeoutDuration: 5s
+      review-service:
+        limitRefreshPeriod: 20s
+        limitForPeriod: 3
+        timeoutDuration: 0s
+
+sec01:
+  service:
+    product: 'http://localhost:7070/sec01/product'
+    promotion: 'http://localhost:7070/sec01/promotion'
+    review: 'http://localhost:7070/sec01/review'
+
+
+sec02:
+  service:
+    delta: 'http://localhost:7070/sec02/delta'
+    frontier: 'http://localhost:7070/sec02/frontier'
+    jetblue: 'http://localhost:7070/sec02/jetblue'
+
+
+sec03:
+  service:
+    product: 'http://localhost:7070/sec03/product'
+    user: 'http://localhost:7070/sec03/user'
+    inventory: 'http://localhost:7070/sec03/inventory'
+    shipping: 'http://localhost:7070/sec03/shipping'
+
+
+sec04:
+  service:
+    product: 'http://localhost:7070/sec04/product'
+    user: 'http://localhost:7070/sec04/user'
+    inventory: 'http://localhost:7070/sec04/inventory'
+    shipping: 'http://localhost:7070/sec04/shipping'
+
+
+sec05:
+  service:
+    car: 'http://localhost:7070/sec05/car/reserve'
+    room: 'http://localhost:7070/sec05/room/reserve'
+
+
+sec06:
+  service:
+    product: 'http://localhost:7070/sec06/product'
+    review: 'http://localhost:7070/sec06/review'
+
+
+sec07:
+  service:
+    product: 'http://localhost:7070/sec07/product'
+    review: 'http://localhost:7070/sec07/review'
+
+
+sec08:
+  service:
+    product: 'http://localhost:7070/sec08/product'
+    review: 'http://localhost:7070/sec08/review'
+
+
+sec09:
+  service:
+    product: 'http://localhost:7070/sec09/product'
+    review: 'http://localhost:7070/sec09/review'
+
+
+sec10:
+  service:
+    product: 'http://localhost:7070/sec10/product'
+    review: 'http://localhost:7070/sec10/review'
