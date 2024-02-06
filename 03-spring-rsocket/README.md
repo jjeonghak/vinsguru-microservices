@@ -12,6 +12,10 @@
 | **Spring RSocket** | - _Request & Response_ <br> - _Fire & Forget_ <br> - _Request Stream_ <br> - _Request Channel_ <br> - _SSL/TLS_ <br> - _Loadbalance_| [_spring-rsocket_](./spring-rsocket) |
 | **MSA RSocket** | - _RSocketConnectorConfigurer_ <br> - _RSocketStrategiesCustomizer_ <br> - _MimeType_ | [_msa-rsocket_](./msa-rsocket) |
 
+<br>
+
+## MSA RSocket - Structure
+<img src="https://private-user-images.githubusercontent.com/77607258/302470458-7854ac36-907a-4bde-a508-495b3ccd33d0.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MDcxODIxMDgsIm5iZiI6MTcwNzE4MTgwOCwicGF0aCI6Ii83NzYwNzI1OC8zMDI0NzA0NTgtNzg1NGFjMzYtOTA3YS00YmRlLWE1MDgtNDk1YjNjY2QzM2QwLnBuZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNDAyMDYlMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjQwMjA2VDAxMTAwOFomWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPWEwNDUzNzNlMDAyODRjNjFhOTZlNjY3NzE2NjY4ZGE2MDQ4MjM0NDFiYTg4YmViMTg1NWE5NWY4MzdlNDNjNGQmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0JmFjdG9yX2lkPTAma2V5X2lkPTAmcmVwb19pZD0wIn0.vFa_meOD0vgo5qJNTtjMJPIMiRZ5-w_HeR0sfH97FcM">
 
 <br>
 
