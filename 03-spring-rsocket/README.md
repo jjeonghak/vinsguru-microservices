@@ -15,7 +15,7 @@
 <br>
 
 ## MSA RSocket - Structure
-<img src="https://github.com/jjeonghak/vinsguru-microservices/blob/main/md-images/03-rsocket-msa.png">
+<img src="https://github.com/jjeonghak/vinsguru-microservices/blob/main/md-images/03-rsocket-msa.png" width="600" height="500">
 
 <br>
 
@@ -61,7 +61,7 @@
 
 <br>
 
-<img src = "https://github.com/jjeonghak/vinsguru-microservices/blob/main/md-images/03-rsocket-model.png">
+<img src = "https://github.com/jjeonghak/vinsguru-microservices/blob/main/md-images/03-rsocket-model.png" width="500" height="400">
 
 <br>
 
