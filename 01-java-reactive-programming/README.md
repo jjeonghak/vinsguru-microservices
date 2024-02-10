@@ -25,22 +25,100 @@
 
 ## Reactor Publisher
 1. Mono&lt;T&gt;
-    * Emit 0 or 1 item
+ * Emit `0` or `1` item
+
+<img src="https://github.com/jjeonghak/vinsguru-microservices/blob/main/md-images/01-mono.png">
+
+| **TYPE** | **CONDITION** | **USE** |
+| ------- | ------- | ------- |
+| _Create Mono_ | _Data already present_ | - _Mono.just(data)_ |
+| _Create Mono_ | _Data to be calculated_ | - _Mono.fromSupplier(() -> getData())_ <br> - _Mono.fromCallable(() -> getData())_ |
+| _Create Mono_ | _Data is coming from async completableFuture_ | - _Mono.fromFuture(future)_ |
+| _Create Mono_ | _Emit empty once a given runnable is complete_ | - _Mono.fromRannable(runnable)_ |
+| _Pass Mono as argument_ | _Function accepts a Mono<Address>_ <br> _But I do not have data_ | - _Mono.empty()_ |
+| _Return Mono_ | _Function needs to return a Mono_ | - _Mono.error(throwable)_ <br> - _Mono.empty()_ <br> - _above creation types_ |
+
+<br>
 
 2. Flux&lt;T&gt;
-    * Emit 0 or N item
-    * Like a list or stream
+ * Emit `0` or `N` item
+ * Like a list or stream
+
+<img src="https://github.com/jjeonghak/vinsguru-microservices/blob/main/md-images/01-flux.png">
+
+| **TYPE** | **CONDITION** | **USE** |
+| ------- | ------- | ------- |
+| _Create Flux_ | _Data already present_ | - _Flux.just(...)_ <br> - _Flux.fromIterable()_ <br> - _Flux.fromArray()_ <br> - _Flux.fromStream()_ <br> |
+| _Create Flux_ | _Range / Count_ | - _Flux.range(start, count)_ |
+| _Create Flux_ | _Periodic_ | - _Flux.interval(duration)_ |
+| _Create Flux_ | _Mono -> Flux_ | - _Flux.from(mono)_ |
+
+<br>
+
+## Flux - List Differecne
+
+<img src="https://github.com/jjeonghak/vinsguru-microservices/blob/main/md-images/01-flux-list.png">
+
+<br>
+
+## Flux - Create / Generate
+* Create
+   * Accepts a `Consumer<FluxSink<T>>`
+   * Consumer is invoked only once
+   * Consumer can emit 0...N elements immediately
+   * Publisher might not be aware of downstream processing speed
+   * So we need to provide Overflow Strategy as additional parameter
+   * Thread - safe
+
+````java
+   fluxSink.requestedFromDownstream();
+   fluxSink.isCancelled();
+````
+
+* Generate
+   * Accepts a `Consumer<SynchronousSink<T>>`
+   * Consumer is invoked again and again based on the downstream demand
+   * Consumer can emit only one element
+   * Publisher produces elements based on the downstream demand
+
+<br>
+
+## Operator - Not Exhaustive
+   * filter, map, take, delayElements, do Hooks, onError, timeout
+   * defaultIfEmpty / switchIfEmpty
+   * handle
+   
+   * limitRate
+<img src="https://github.com/jjeonghak/vinsguru-microservices/blob/main/md-images/01-limitRate.png">
+
+<br>
+   
+   * transform
+<img src="https://github.com/jjeonghak/vinsguru-microservices/blob/main/md-images/01-transform.png">
+
+<br>
+   
+   * switchOnFirst
+<img src="https://github.com/jjeonghak/vinsguru-microservices/blob/main/md-images/01-switchOnFirst.png">
+
+<br>
+   
+   * flatMap
+<img src="https://github.com/jjeonghak/vinsguru-microservices/blob/main/md-images/01-flatMap.png">
 
 <br>
 
 ## Subscriber
-* onNext - Consumer&lt;T&gt;
-* onError - Consumer&lt;Throwable&gt;
-* onComplete - Runnable
+* onNext - `Consumer<T>`
+* onError - `Consumer<Throwable>`
+* onComplete - `Runnable`
 
 <br>
 
 ## Hot Publisher
+
+<img src="https://github.com/jjeonghak/vinsguru-microservices/blob/main/md-images/01-hotPublisher.png">
+
 | **METHOD** | **USAGE** |
 | ------- | ------- |
 | _publish().refCount(1)_ | _At least 1 subscriber._<br>_It will reconnect later when all the subscribers cancelled and some new subscriber appears._ |
@@ -51,8 +129,21 @@
 <br>
 
 ## Schesulers
-* For upstream - subscribeOn
-* For downstream - publishOn
+* For `upstream` - subscribeOn
+
+<img src="https://github.com/jjeonghak/vinsguru-microservices/blob/main/md-images/01-sub-on.png">
+
+<br>
+
+* For `downstream` - publishOn
+
+<img src="https://github.com/jjeonghak/vinsguru-microservices/blob/main/md-images/01-pub-on.png">
+
+<br>
+
+* Combine subscribeOn & publishOn
+
+<img src="https://github.com/jjeonghak/vinsguru-microservices/blob/main/md-images/01-pub-sub-on.png">
 
 <br>
 
@@ -67,7 +158,9 @@
 
 * All the operations are always executed in sequential  
 * Data is processed one by one via 1 thread in the ThreadPool for a Subscriber  
-* Schesulers.parallel method is a thread pool for CPU tasks - Does not mean parallel execution  
+* Schesulers.parallel method is a thread pool for CPU tasks - Does not mean parallel execution
+
+<img src="https://github.com/jjeonghak/vinsguru-microservices/blob/main/md-images/01-schedulers.png">
 
 <br>
 
@@ -79,6 +172,25 @@
 | _drop_ | _Once the queue is full, new items will be dropped_ |
 | _latest_ | _Once the queue is full, keep 1 latest item as and when it arrives - drop old_ |
 | _error_ | _Throw error th the downstream_ |
+
+<br>
+
+## Batch
+* Buffer
+
+<img src="https://github.com/jjeonghak/vinsguru-microservices/blob/main/md-images/01-buffer.png">
+
+<br>
+
+* Window
+
+<img src="https://github.com/jjeonghak/vinsguru-microservices/blob/main/md-images/01-window.png">
+
+<br>
+
+* GroupBy
+
+<img src="https://github.com/jjeonghak/vinsguru-microservices/blob/main/md-images/01-group.png">
 
 <br>
 
@@ -122,11 +234,5 @@
     * Scenario name
 
 <br>
-
-
-
-
-
-
 
 
