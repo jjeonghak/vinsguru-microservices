@@ -14,7 +14,7 @@
 <br>
 
 ## Simple Microservice - Structure
-<img src="https://github.com/jjeonghak/vinsguru-microservices/blob/main/md-images/02-msa-structure.png">
+<img src="https://github.com/jjeonghak/vinsguru-microservices/blob/main/md-images/02-msa-structure.png" width="600" height="500">
 
 <br>
 
