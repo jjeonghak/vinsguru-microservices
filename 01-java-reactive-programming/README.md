@@ -27,7 +27,7 @@
 1. Mono&lt;T&gt;
  * Emit `0` or `1` item
 
-<img src="https://github.com/jjeonghak/vinsguru-microservices/blob/main/md-images/01-mono.png">
+<img src="https://github.com/jjeonghak/vinsguru-microservices/blob/main/md-images/01-mono.png" width="500" height="400">
 
 | **TYPE** | **CONDITION** | **USE** |
 | ------- | ------- | ------- |
@@ -44,7 +44,7 @@
  * Emit `0` or `N` item
  * Like a list or stream
 
-<img src="https://github.com/jjeonghak/vinsguru-microservices/blob/main/md-images/01-flux.png">
+<img src="https://github.com/jjeonghak/vinsguru-microservices/blob/main/md-images/01-flux.png" width="500" height="400">
 
 | **TYPE** | **CONDITION** | **USE** |
 | ------- | ------- | ------- |
@@ -55,9 +55,9 @@
 
 <br>
 
-## Flux - List Differecne
+### Flux - List Differecne
 
-<img src="https://github.com/jjeonghak/vinsguru-microservices/blob/main/md-images/01-flux-list.png">
+<img src="https://github.com/jjeonghak/vinsguru-microservices/blob/main/md-images/01-flux-list.png" width="500" height="400">
 
 <br>
 
@@ -87,24 +87,27 @@
    * filter, map, take, delayElements, do Hooks, onError, timeout
    * defaultIfEmpty / switchIfEmpty
    * handle
-   
-   * limitRate
-<img src="https://github.com/jjeonghak/vinsguru-microservices/blob/main/md-images/01-limitRate.png">
 
 <br>
    
-   * transform
-<img src="https://github.com/jjeonghak/vinsguru-microservices/blob/main/md-images/01-transform.png">
+### Operator - limitRate
+
+<img src="https://github.com/jjeonghak/vinsguru-microservices/blob/main/md-images/01-limitRate.png" width="500" height="400">
 
 <br>
    
-   * switchOnFirst
-<img src="https://github.com/jjeonghak/vinsguru-microservices/blob/main/md-images/01-switchOnFirst.png">
+### Operator - transform
+<img src="https://github.com/jjeonghak/vinsguru-microservices/blob/main/md-images/01-transform.png" width="600" height="500">
 
 <br>
    
-   * flatMap
-<img src="https://github.com/jjeonghak/vinsguru-microservices/blob/main/md-images/01-flatMap.png">
+### Operator - switchOnFirst
+<img src="https://github.com/jjeonghak/vinsguru-microservices/blob/main/md-images/01-switchOnFirst.png" width="500" height="500">
+
+<br>
+   
+### Operator - flatMap
+<img src="https://github.com/jjeonghak/vinsguru-microservices/blob/main/md-images/01-flatMap.png" width="600" height="500">
 
 <br>
 
@@ -117,7 +120,7 @@
 
 ## Hot Publisher
 
-<img src="https://github.com/jjeonghak/vinsguru-microservices/blob/main/md-images/01-hotPublisher.png">
+<img src="https://github.com/jjeonghak/vinsguru-microservices/blob/main/md-images/01-hotPublisher.png" width="700" height="500">
 
 | **METHOD** | **USAGE** |
 | ------- | ------- |
@@ -131,19 +134,19 @@
 ## Schesulers
 * For `upstream` - subscribeOn
 
-<img src="https://github.com/jjeonghak/vinsguru-microservices/blob/main/md-images/01-sub-on.png">
+<img src="https://github.com/jjeonghak/vinsguru-microservices/blob/main/md-images/01-sub-on.png" width="400" height="400">
 
 <br>
 
 * For `downstream` - publishOn
 
-<img src="https://github.com/jjeonghak/vinsguru-microservices/blob/main/md-images/01-pub-on.png">
+<img src="https://github.com/jjeonghak/vinsguru-microservices/blob/main/md-images/01-pub-on.png" width="400" height="400">
 
 <br>
 
 * Combine subscribeOn & publishOn
 
-<img src="https://github.com/jjeonghak/vinsguru-microservices/blob/main/md-images/01-pub-sub-on.png">
+<img src="https://github.com/jjeonghak/vinsguru-microservices/blob/main/md-images/01-pub-sub-on.png" width="400" height="400">
 
 <br>
 
@@ -160,7 +163,7 @@
 * Data is processed one by one via 1 thread in the ThreadPool for a Subscriber  
 * Schesulers.parallel method is a thread pool for CPU tasks - Does not mean parallel execution
 
-<img src="https://github.com/jjeonghak/vinsguru-microservices/blob/main/md-images/01-schedulers.png">
+<img src="https://github.com/jjeonghak/vinsguru-microservices/blob/main/md-images/01-schedulers.png" width="700" height="500">
 
 <br>
 
@@ -178,19 +181,19 @@
 ## Batch
 * Buffer
 
-<img src="https://github.com/jjeonghak/vinsguru-microservices/blob/main/md-images/01-buffer.png">
+<img src="https://github.com/jjeonghak/vinsguru-microservices/blob/main/md-images/01-buffer.png" width="500" height="400">
 
 <br>
 
 * Window
 
-<img src="https://github.com/jjeonghak/vinsguru-microservices/blob/main/md-images/01-window.png">
+<img src="https://github.com/jjeonghak/vinsguru-microservices/blob/main/md-images/01-window.png" width="500" height="400">
 
 <br>
 
 * GroupBy
 
-<img src="https://github.com/jjeonghak/vinsguru-microservices/blob/main/md-images/01-group.png">
+<img src="https://github.com/jjeonghak/vinsguru-microservices/blob/main/md-images/01-group.png" width="500" height="400">
 
 <br>
 
