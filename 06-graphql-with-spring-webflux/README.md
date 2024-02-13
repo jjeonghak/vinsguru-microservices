@@ -1,8 +1,8 @@
 # [ 06-graphql-with-spring-webflux ]
 > GraphQL 학습을 위한 디렉토리  
-> GraphQL 활용 실습
-> REST 통신과 비교
-> 간단한 마이크로서비스 적용 실습
+> GraphQL 활용 실습  
+> REST 통신과 비교  
+> 간단한 마이크로서비스 적용 실습  
 
 <br>
 
