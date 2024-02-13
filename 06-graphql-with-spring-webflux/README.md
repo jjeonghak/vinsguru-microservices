@@ -55,7 +55,7 @@
 
 <br>
 
-## Custom/Object Types
+## Custom / Object Types
 ````graphql
 type Customer {
     # Customer ID is not null
