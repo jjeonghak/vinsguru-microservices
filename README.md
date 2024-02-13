@@ -10,6 +10,7 @@
 * [03-spring-rsocket](./03-spring-rsocket) : Spring RSocket 학습
 * [04-redis-with-spring-webflux](./04-redis-with-spring-webflux) : Redis를 활용한 Spring Webflux 학습
 * [05-design-patterns-with-webflux](./05-design-patterns-with-webflux) : Microservice 디자인 패턴 학습
+* [06-graphql-with-spring-webflux](./06-graphql-with-spring-webflux) : GraphQL 학습
 
 <br>
 
