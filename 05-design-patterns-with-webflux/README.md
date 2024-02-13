@@ -19,6 +19,11 @@
 
 <br>
 
+<img src="https://github.com/jjeonghak/vinsguru-microservices/blob/main/md-images/05-gateway-aggregator-pattern.png" width="500" height="400">
+
+
+<br>
+
 ## Scatter Gether Pattern
 * Ask all our upstream services for a same type of messages
 * And choose the best one or gather everything
@@ -26,8 +31,16 @@
 
 <br>
 
+<img src="https://github.com/jjeonghak/vinsguru-microservices/blob/main/md-images/05-scatter-gether-pattern.png" width="600" height="400">
+
+<br>
+
 ## Orchestrator Pattern
 * Aggregator + additional business logic to provide a workflow  
+
+<br>
+
+<img src="https://github.com/jjeonghak/vinsguru-microservices/blob/main/md-images/05-orchestrator-pattern.png" width="600" height="400">
 
 <br>
 
@@ -38,9 +51,17 @@
 
 <br>
 
+<img src="https://github.com/jjeonghak/vinsguru-microservices/blob/main/md-images/05-orchestrator-sequential-pattern.png" width="700" height="300">
+
+<br>
+
 ## Splitter Pattern
 * Look like Scatter Gether Pattern
 * But it has opposite flow(stream)
+
+<br>
+
+<img src="https://github.com/jjeonghak/vinsguru-microservices/blob/main/md-images/05-splitter-pattern.png" width="600" height="400">
 
 <br>
 
@@ -78,6 +99,10 @@
 
 <br>
 
+<img src="https://github.com/jjeonghak/vinsguru-microservices/blob/main/md-images/05-circuit-breaker-pattern.png" width="400" height="300">
+
+<br>
+
 ## Rate Limiter Pattern
 1. Server Side Rate Limiter
     * To limit the number of requests being served by a server node
@@ -100,3 +125,6 @@
 
 <br>
 
+<img src="https://github.com/jjeonghak/vinsguru-microservices/blob/main/md-images/05-bulkhead-pattern.png" width="500" height="500">
+
+<br>
