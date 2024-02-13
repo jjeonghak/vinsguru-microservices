@@ -55,7 +55,7 @@
 
 <br>
 
-### Flux - List Differecne
+### Difference - Flux and List
 
 <img src="https://github.com/jjeonghak/vinsguru-microservices/blob/main/md-images/01-flux-list.png" width="500" height="400">
 
