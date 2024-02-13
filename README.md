@@ -12,3 +12,15 @@
 * [05-design-patterns-with-webflux](./05-design-patterns-with-webflux) : Microservice 디자인 패턴 학습
 
 <br>
+
+## Microservices - Backend Communication
+| **TECHNOLOGY** | **FEATURES** | **REQUEST & RESPONSE** | **STREAM BASE** |
+| ------- | ------- | ------- | ------- |
+| **_Spring Wab_** | _Sync / REST_ | _Yes_ | _No_ |
+| **_Spring WebFlux_** | _Reactive / REST_ | _Yes_ | _Yes_ |
+| **_gRPC_** | _Sync / Low Latency / Bi-directional streaming_ | _Yes_ | _Yes_ |
+| **_RSocket_** | _Reactive / Low Latency / Bi-directional streaming_ | _Yes_ | _Yes_ |
+| **_Kafka_** | _Event Driven Async_ |
+
+<br>
+
