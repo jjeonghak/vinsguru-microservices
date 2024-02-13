@@ -15,7 +15,7 @@
 <br>
 
 ## Microservices - Backend Communication
-| **TECHNOLOGY** | **FEATURES** | **REQUEST & RESPONSE** | **STREAM BASE** |
+| **TECHNOLOGY** | **FEATURES** | **REQUEST** <br> **RESPONSE** | **STREAM** <br> **BASE** |
 | ------- | ------- | ------- | ------- |
 | **_Spring Web_** | _Sync / REST_ | _Yes_ | _No_ |
 | **_Spring WebFlux_** | _Reactive / REST_ | _Yes_ | _Yes_ |
