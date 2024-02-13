@@ -1,0 +1,13 @@
+spring:
+  graphql:
+    path: '/graphql'
+
+    graphiql:
+      enabled: true
+      path: '/graphiql'
+
+service:
+  url:
+    customer: 'http://localhost:7070/customer'
+    movie: 'http://localhost:7070/movie'
+    review: 'http://localhost:7070/review'

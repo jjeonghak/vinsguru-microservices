@@ -1,0 +1,4 @@
+type Query {
+    basicWithArgument(arg: String!): String
+}
+

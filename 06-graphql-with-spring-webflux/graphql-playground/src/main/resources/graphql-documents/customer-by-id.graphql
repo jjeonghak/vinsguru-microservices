@@ -1,0 +1,14 @@
+query GetCustomerById($id: ID!) {
+    a: customerById(id: $id) {
+        ... customerDetails
+    }
+    b: customerById(id: 2) {
+       ... customerDetails
+    }
+}
+
+fragment customerDetails on Customer {
+    name
+    age
+    city
+}

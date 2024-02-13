@@ -1,0 +1,38 @@
+sec: sec16
+
+
+spring:
+  graphql:
+    # graphql
+    path: '/graphql'
+    schema:
+      locations: 'classpath:graphql/${sec}'
+
+    # graphql subscription stream
+    websocket:
+      path: '/graphql'
+
+    # graphiql
+    graphiql:
+      path: '/graphiql'
+      enabled: true
+
+  # init data.sql
+  sql:
+    init:
+      mode: always
+
+
+logging:
+  level:
+    root: INFO
+
+
+customer:
+  service:
+    url:
+      sec16: 'http://localhost:8080/graphql'
+
+  events:
+    url:
+      sec16: 'ws://localhost:8080/graphql'

@@ -1,0 +1,9 @@
+type Query {
+    basic: String
+    basicWithArgument(arg: String!): String
+    random: Int!
+}
+
+
+
+

@@ -1,0 +1,19 @@
+query GetCustomerByIdWithUnion($id: ID!) {
+    customerByIdWithUnion(id: $id) {
+        type: __typename
+        ... customerDetails
+        ... customerNotFoundDetails
+    }
+}
+
+fragment customerDetails on Customer {
+    id
+    name
+    age
+    city
+}
+
+fragment customerNotFoundDetails on CustomerNotFound {
+    id
+    message
+}

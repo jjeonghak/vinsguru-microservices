@@ -1,0 +1,12 @@
+query GetCustomerByIdWithError($id: ID!) {
+    customerById(id: $id) {
+        ... customerDetails
+    }
+}
+
+fragment customerDetails on Customer {
+    id
+    name
+    age
+    city
+}
