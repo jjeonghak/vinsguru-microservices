@@ -210,6 +210,27 @@ return Mono.zip(
 
 <br>
 
+## Spring - Yaml
+````yml
+spring:
+  graphql:
+    # graphql
+    path: '/graphql'
+    schema:
+      locations: 'classpath:graphql'
+
+    # graphql subscription stream
+    websocket:
+      path: '/graphql'
+
+    # graphiql
+    graphiql:
+      path: '/graphiql'
+      enabled: true
+````
+
+<br>
+
 ## CRUD Application with GraphQL
 1. `@QueryMapping` - GET
 2. `@MutationMapping` - POST / PUT / DELETE
