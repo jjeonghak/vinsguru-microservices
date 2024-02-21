@@ -1,4 +1,4 @@
-# [07-reactive-kafka-from-scratch ]
+# [ 07-reactive-kafka-from-scratch ]
 > Kafka 및 Spring Webflux 기초 학습을 위한 디렉토리  
 > Kafka 활용 실습  
 
